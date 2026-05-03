@@ -1,0 +1,1 @@
+import express from "express"; import { getApprovals, approveSchedule, rejectSchedule, completeSchedule, } from "../controllers/approvalController.js"; const router = express.Router(); router.get("/", getApprovals); router.put("/:id/approve", approveSchedule); router.put("/:id/reject", rejectSchedule); router.put("/:id/complete", completeSchedule); export default router;

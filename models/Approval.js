@@ -1,0 +1,2 @@
+import mongoose from "mongoose"; const approvalSchema = new mongoose.Schema( { schedule: { type: mongoose.Schema.Types.ObjectId, ref: "Schedule", required: true, }, employee: { type: mongoose.Schema.Types.ObjectId, ref: "Employee", required: true, },
+status: { type: String, enum: ["Pending Supervisor Approval", "Approved", "Rejected"], default: "Pending Supervisor Approval", }, completed: { type: Boolean, default: false, }, }, { timestamps: true } ); export default mongoose.model("Approval", approvalSchema);

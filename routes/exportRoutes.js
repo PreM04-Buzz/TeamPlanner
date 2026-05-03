@@ -1,0 +1,1 @@
+import express from "express"; import { exportSchedulesToExcel } from "../controllers/exportController.js"; const router = express.Router(); router.get("/excel", exportSchedulesToExcel); export default router;
